@@ -36,7 +36,8 @@ Ask one of the following:
 - Where is your code stored remotely?
 
 Notes:
+Difference between my repository and my instructor is that it is my own work compared to others
+Commit is saving the work while push is putting it into the web
+My code is stored onto my storage.
+Remotely it is on the cloud or on the web.
 
-________Push is putting it onto the web and I have my own repisitory.______________________________________________
-
-________________________________
