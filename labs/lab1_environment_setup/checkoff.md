@@ -1,4 +1,4 @@
----
+
 
 ## Step 7: Lab 1 checkoff file
 
@@ -7,23 +7,23 @@
 ```markdown
 # Lab 1 Checkoff
 
-Student name: _______________________________
+Student name: __________Justin__________________
 
-GitHub username: ____________________________
+GitHub username: _________JustinShackelford23_______________
 
 ## Required items
 
-- [ ] Student has a GitHub account.
-- [ ] Student forked `brash99/cpsc250L`.
-- [ ] Student cloned their own fork into PyCharm.
-- [ ] PyCharm project opens successfully.
-- [ ] Python interpreter is configured.
-- [ ] Required packages are installed.
-- [ ] `helloworld.py` has been edited.
-- [ ] `helloworld.py` runs successfully.
-- [ ] Changes were committed.
-- [ ] Changes were pushed to GitHub.
-- [ ] Student can show the pushed file on github.com.
+- [X] Student has a GitHub account.
+- [X] Student forked `brash99/cpsc250L`.
+- [X] Student cloned their own fork into PyCharm.
+- [X] PyCharm project opens successfully.
+- [X] Python interpreter is configured.
+- [X] Required packages are installed.
+- [X] `helloworld.py` has been edited.
+- [X] `helloworld.py` runs successfully.
+- [X] Changes were committed.
+- [X] Changes were pushed to GitHub.
+- [X] Student can show the pushed file on github.com.
 
 ## Live question
 
@@ -37,6 +37,6 @@ Ask one of the following:
 
 Notes:
 
-______________________________________________________
+________Push is putting it onto the web and I have my own repisitory.______________________________________________
 
-______________________________________________________
+________________________________
