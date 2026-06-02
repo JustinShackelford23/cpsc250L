@@ -64,7 +64,11 @@ def compute_maximum(values):
     Compute the maximum value in a list of numbers.
     """
     # TODO: Replace this with a correct maximum calculation.
-    return 0.0
+    max=values[0]
+    for L in values:
+        if L > max:
+            max = L
+    return max
 
 
 def print_summary(values):
