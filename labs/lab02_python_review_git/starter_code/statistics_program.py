@@ -52,11 +52,7 @@ def compute_minimum(values):
     Compute the minimum value in a list of numbers.
     """
     # TODO: Replace this with a correct minimum calculation.
-    minimum = values[0]
-    for L in values:
-        if L < minimum:
-            minimum = L
-    return minimum
+    return min(values)
 
 
 def compute_maximum(values):
@@ -64,11 +60,7 @@ def compute_maximum(values):
     Compute the maximum value in a list of numbers.
     """
     # TODO: Replace this with a correct maximum calculation.
-    max=values[0]
-    for L in values:
-        if L > max:
-            max = L
-    return max
+    return max(values)
 
 
 def print_summary(values):
@@ -83,9 +75,9 @@ def print_summary(values):
     # TODO: Improve this output formatting.
     print("Temperature Summary")
     print("Number of readings:", count)
-    print("Minimum temperature:", minimum)
-    print("Maximum temperature:", maximum)
-    print("Average temperature:", average)
+    print(f"Minimum temperature: {minimum:.2f}")
+    print(f"Maximum temperature: {maximum:.2f}")
+    print(f"Average temperature: {average:.4f}")
 
 
 def main():
