@@ -5,7 +5,7 @@ def read_temperatures(filename):
         for line in file:
             # reads every line in the file
             if line != "\n":
-                #detects if the line is not a null
+                # detects if the line is not a null
                 number = float(line.strip())
                 # Put the line as a float and removes characters then assigns it to number
                 temperatures.append(number)
@@ -18,13 +18,14 @@ def calculate_average(values):
     for temp in values:
         # Reads every float in values
         Average = Average + temp
-        #adds the float number to avg then loops until finished
+        # adds the float number to avg then loops until finished
     Avg = Average / len(values)
     # Does average divided by total numbers in value and assigns to Avg
     return Avg
     # Returns Avg
 def find_maximum(values):
-    pass
+    return max(values)
+    # Uses the Max function to find the maximum value
 
 def find_minimum(values):
     pass
