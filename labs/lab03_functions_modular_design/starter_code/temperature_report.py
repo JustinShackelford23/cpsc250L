@@ -34,7 +34,16 @@ def find_minimum(values):
     # Uses the Min function to find minimum value
 
 def count_above_threshold(values, threshold):
-    pass
+    Hold=0.0
+    # Assigns Hold as a float number
+    for temp in values:
+        # Reads all values
+        if temp > threshold:
+            # If the temperature is above the threshold it puts the other line of code
+            Hold = Hold + 1
+            # Adds one to Hold
+    return Hold
+
 
 def print_report(values):
     avg = calculate_average(values)
@@ -44,7 +53,7 @@ def print_report(values):
     # Uses all the functions and assigned them to names avg, max, min, and thresh
     print("Temperature Report")
     print("------------------")
-    print("Average temperature:", avg)
+    print(f"Average temperature: {avg:.1f}")
     print("Maximum temperature:", max)
     print("Minimum temperature:", min)
     print("Temperatures above 80:", thresh)
