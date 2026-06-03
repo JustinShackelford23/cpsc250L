@@ -47,6 +47,7 @@ def compute_average(values):
     return statistics.mean(values)
 
 
+
 def compute_minimum(values):
     """
     Compute the minimum value in a list of numbers.
