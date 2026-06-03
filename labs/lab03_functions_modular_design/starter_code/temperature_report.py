@@ -34,8 +34,8 @@ def find_minimum(values):
     # Uses the Min function to find minimum value
 
 def count_above_threshold(values, threshold):
-    Hold=0.0
-    # Assigns Hold as a float number
+    Hold=0
+    # Assigns Hold as a integer
     for temp in values:
         # Reads all values
         if temp > threshold:
