@@ -12,6 +12,7 @@ def read_temperatures(filename):
                 # Appends number to the list temperature
     return temperatures
     # returns the list of temperatures when done with every line
+
 def calculate_average(values):
     Average = 0.0
     # Assigns average to a float
@@ -23,12 +24,14 @@ def calculate_average(values):
     # Does average divided by total numbers in value and assigns to Avg
     return Avg
     # Returns Avg
+
 def find_maximum(values):
     return max(values)
     # Uses the Max function to find the maximum value
 
 def find_minimum(values):
-    pass
+    return min(values)
+    # Uses the Min function to find minimum value
 
 def count_above_threshold(values, threshold):
     pass
