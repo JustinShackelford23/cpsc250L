@@ -32,10 +32,12 @@ def calculate_average(scores):
         if score is not None:
             sum += score
             count += 1
+        # reads one by one in scores and if it isn't None it adds to sum and put count one
     if count > 0:
         return sum / count
     else:
         return None
+    # Makes sure if the count is zero it doesn't divide by zero
 
 
 
@@ -66,16 +68,20 @@ def read_scores(filename):
     ]
     """
     my_list = []
+    # Empty List
     with open(filename) as csvfile:
         reader = csv.reader(open(filename))
+        # Opens file as reader
         for row in reader:
             if reader.line_num == 1:
+                # Skips first line
                 continue
             else:
                 name = row[0]
                 scores = [clean_score(row[1]),clean_score( row[2]), clean_score(row[3])]
                 average = calculate_average(scores)
             my_list.append({"name": name, "scores": scores, "average": average})
+            # Puts the Name, Score, and Average in a Dict using Clean_score function and Calculate_average function
     return my_list
 
 
@@ -105,6 +111,7 @@ def letter_grade(average):
         return "D"
     else:
         return "F"
+    # Checks if average is below or equal to the number and then returns to the letter grade
 
 
 def print_student_report(records):
@@ -113,6 +120,7 @@ def print_student_report(records):
     """
     for record in records:
         print(f'{record["name"]}: Average = {record["average"]:.2f} Grade = {letter_grade(record["average"])}')
+        # Goes one by one in records and puts the Name, Average by two decimal points, and Letter grade
     return
 
 
@@ -126,14 +134,20 @@ def print_class_summary(records):
         lowest average
     """
     Num = 0
+    # Assign Num to 0
     for record in records:
         Num += record["average"]
+        # Reads record and in average adds every average number to Num
     Num /= len(records)
+    # Num divided by the amount of records
 
     print("Number of students:", len(records))
     print(f'class average: {Num:.2f}')
     print(f'highest average: {max(record["average"] for record in records):.2f}')
     print(f'lowest average: {min(record["average"] for record in records):.2f}')
+    # Prints Number of students with amount of records, Class average using Num by two decimal
+    # Highest average using Max function among all average scores and Lowest average using Min function from records
+
 
 def main():
     filename = "../data/quiz_scores.csv"
