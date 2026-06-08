@@ -23,7 +23,10 @@ class StudentRecord:
 
         Only add scores between 0 and 100.
         """
-        self.scores.append(score)
+        if score > 0 or score < 100:
+            self.scores.append(score)
+        else:
+            self.scores.append("")
 
     def calculate_average(self):
         """
@@ -31,7 +34,14 @@ class StudentRecord:
 
         If the student has no scores, return None.
         """
-        return 2.0
+        avg = 0.0
+        for score in self.scores:
+            avg += score
+        if avg == 0:
+            return None
+        else:
+            return avg / len(self.scores)
+
 
     def highest_score(self):
         """
@@ -39,7 +49,10 @@ class StudentRecord:
 
         If the student has no scores, return None.
         """
-        return 2.0
+        if self.scores == []:
+            return None
+        else:
+            return max(self.scores)
 
     def lowest_score(self):
         """
@@ -47,7 +60,10 @@ class StudentRecord:
 
         If the student has no scores, return None.
         """
-        return 2.0
+        if self.scores == []:
+            return None
+        else:
+            return min(self.scores)
 
     def letter_grade(self):
         """
@@ -60,7 +76,16 @@ class StudentRecord:
             D: average >= 57
             F: otherwise
         """
-        pass
+        if self.calculate_average() >= 87:
+            return ("A")
+        elif self.calculate_average() >= 77:
+            return("B")
+        elif self.calculate_average() >= 67:
+            return("C")
+        elif self.calculate_average() >= 57:
+            return("D")
+        else:
+            return("F")
 
     def __str__(self):
         """
