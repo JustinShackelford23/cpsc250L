@@ -31,6 +31,13 @@ def total_inventory(books):
     """
     Return the total number of all books in inventory.
     """
+    total = 0
+    for book in books:
+        if book.stock >= 1:
+            total += book.stock
+    return total
+
+
 
 
 def find_by_author(books, author):
