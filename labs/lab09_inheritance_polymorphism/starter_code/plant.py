@@ -11,7 +11,7 @@ class Plant:
 
 
 class Flower(Plant):
-    def __init__(self, name, height_cm=30, color='green'):
+    def __init__(self, name, height_cm=30, color='Green'):
         self.color = color
         super().__init__(name, height_cm)
 
