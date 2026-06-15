@@ -32,10 +32,3 @@ class Vegetable(Plant):
 
     def __str__(self):
         return f'Name: {self.name}, Height: {self.height} cm, Harvest Days: {self.harvest}, Type: Vegetable'
-
-
-
-#Commit 1: Add Plant base class
-#Commit 2: Add Flower derived class
-#Commit 3: Add Vegetable derived class
-#Commit 4: Add inventory program and testing
