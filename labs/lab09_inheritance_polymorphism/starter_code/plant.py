@@ -32,3 +32,4 @@ class Vegetable(Plant):
 
     def __str__(self):
         return f'Name: {self.name}, Height: {self.height} cm, Harvest Days: {self.harvest}, Type: Vegetable'
+
