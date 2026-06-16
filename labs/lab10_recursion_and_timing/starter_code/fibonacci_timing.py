@@ -1,6 +1,6 @@
 import time
 
-def fib_recursive(n)
+def fib_recursive(n):
     # TODO: write this function
     if n == 0:
         return 0
@@ -30,7 +30,10 @@ def time_function(function, n):
     # TODO: write this function - google the python time module to figure out how it works
     # TODO: start a timer, call the appropriate function, then stop the timer
     # TODO: return the elapsed time
-    return 0
+    start_time = time.perf_counter()
+    function(n)
+    end_time = time.perf_counter()
+    return end_time - start_time
 
 def main():
     values = [5, 10, 20, 25, 30, 35, 40]
