@@ -2,7 +2,12 @@ import time
 
 def fib_recursive(n)
     # TODO: write this function
-    pass
+    if n == 0:
+        return 0
+    elif n == 1:
+        return 1
+    else:
+        return fibonacci(n - 1) + fibonacci(n - 2)
 
 
 def fib_iterative(n):
@@ -38,3 +43,8 @@ def main():
     # TODO: make the y-axis logarithmic
 
 main()
+
+#Commit 1: Add recursive Fibonacci
+#Commit 2: Add iterative Fibonacci
+#Commit 3: Add timing code
+#Commit 4: Add output table and cleanup
