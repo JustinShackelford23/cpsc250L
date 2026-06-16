@@ -1,4 +1,5 @@
 import time
+import matplotlib.pyplot as plt
 
 def fib_recursive(n):
     # TODO: write this function
@@ -41,15 +42,25 @@ def main():
     print("Fibonacci Timing")
     print("----------------")
     print("n    recursive_time    iterative_time")
-
+    recurs_time =[]
+    iter_time =[]
     for n in values:
         recursive_time = time_function(fib_recursive, n)
         iterative_time = time_function(fib_iterative, n)
+        recurs_time.append(recursive_time)
+        iter_time.append(iterative_time)
         if iterative_time != 0:
             speed = recursive_time/iterative_time
         else:
             speed = float("inf")
         print(f"{n:<5} {recursive_time:.8f} seconds    {iterative_time:.8f} seconds     {speed:.1f}")
+    plt.plot(values, recurs_time, label="recursive_time")
+    plt.plot(values, iter_time, label="iterative_time")
+    plt.yscale("log")
+    plt.xlabel('n')
+    plt.ylabel('Time (s)')
+    plt.title('How long recursive and iterative time takes')
+    plt.show()
 
     # TODO: create a plot which shows both recursive time and iterative time as a function of n
     # TODO: label the x-axis, y-axis, and provide a title
