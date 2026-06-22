@@ -33,7 +33,7 @@ def main():
     ax[0,0].plot(time, xpos, label='x position')
     ax[0,0].set_xlabel('time')
     ax[0,0].set_ylabel('velocity')
-    ax[0,1].plot(time, ypos, label='y velocity')
+    ax[0,1].plot(time, ypos, label='y position')
     ax[0,1].set_xlabel('time')
     ax[0,1].set_ylabel('velocity')
     ax[1,0].plot(time, xvel, label='x velocity')
