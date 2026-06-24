@@ -2,6 +2,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import statsmodels.api as sm
+from scipy.optimize import curve_fit
 
 def load_data(filename):
     # TODO: load data in filename into pandas dataframe and return it
@@ -19,8 +20,15 @@ def fit_statsmodel(df):
     return linear_regression
 
 def fit_curve_fit(df):
-    # TODO: fit a first order polynonial and return slope, int, dslope, dint
-    pass
+    # TODO: fit a first order polynomial and return slope, int, dslope, dint
+    init_values= [0,0]
+    popt, pcov = curve_fit(fitfunc, df['hours'], df['score'],p0=init_values,absolute_sigma=False)
+    slope = popt[0]
+    intercept = popt[1]
+    dslope = pcov[0][0]
+    dintercept = pcov[0][1]
+    return slope, intercept, dslope, dintercept
+
 
 def predict(x, slope, intercept):
     # TODO: return y-values based on x, slope, intercept
@@ -28,7 +36,8 @@ def predict(x, slope, intercept):
 
 def fitfunc(x, *param):
     # TODO: write a linear fit function for use with curve_fit
-    pass
+    return param[0]*x + param[1]
+
 
 
 def main():
